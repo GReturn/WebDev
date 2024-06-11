@@ -1,0 +1,1 @@
+console.log("index.js has successfully connected to index.html");

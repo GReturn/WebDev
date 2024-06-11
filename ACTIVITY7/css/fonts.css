@@ -1,0 +1,17 @@
+/*used for header text*/
+.oxygenBold {
+  font-family: "Oxygen", sans-serif;
+  font-weight: 700;
+}
+
+/*used for body text*/
+.oxygenRegular {
+  font-family: "Oxygen", sans-serif;
+  font-weight: 400;
+}
+
+/*used for smaller text*/
+.oxygenLight {
+  font-family: "Oxygen", sans-serif;
+  font-weight: 300;
+}

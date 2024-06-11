@@ -1,0 +1,23 @@
+/*used for header text*/
+.montserratBold {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 900;
+}
+
+/*used for hn text*/
+.montserratSemibold {
+    font-family: "Montserrat", sans-serif;
+    font-weight:800;
+}
+
+/*used for body text*/
+.montserratRegular {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+}
+
+/*used for small text*/
+.montserratLight {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+}

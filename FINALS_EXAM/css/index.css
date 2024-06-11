@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: "Montserrat", sans-serif;
+    color: #F6B491;
+    font-weight: 600;
+}
+
+main {
+    z-index: 99;
+    width: 100%;
+    flex: 1 0 auto; /* Ensures main takes available space but allows for footer */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+    color: #F6B491;
+    text-decoration: underline;
+    font-weight: 800;
+}
+
+a:hover {
+    color: #FA7947;
+}
+
+/* Media Queries for Responsive Design */
+@media only screen and (max-width: 1200px) {
+    main {
+        padding: 20px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    main {
+        padding: 10px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    main {
+        padding: 5px;
+    }
+}

@@ -1,0 +1,333 @@
+.registration-wrapper {
+    background-color: #34646D;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.75);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    overflow: hidden; /* Prevent overflow */
+    margin: 20px;
+}
+
+.side-img img {
+    display: block;
+    max-width: 600px;
+    max-height: 1000px;
+    width: auto;
+    height: auto;
+    object-fit: cover; /* Ensures the image covers the container without overflowing */
+}
+
+.side-form {
+    display: block;
+    max-width: 1000px;
+    max-height: 1000px;
+    min-height: 500px;
+    min-width: 600px;
+    width: auto;
+    height: auto;
+}
+
+.title-wrapper {
+    margin-top: 30px;
+    margin-right: 30px;
+    text-align: right;
+    color: #FA7947;
+    font-weight: 900;
+}
+
+.title-wrapper h2 {
+    font-size: 32px;
+}
+
+.title-wrapper p {
+    font-size: 18px;
+}
+
+.form-wrapper {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 10px;
+}
+
+.full-width {
+    grid-column: 1 / 3;
+}
+
+.form-box {
+    padding-top: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 0px;
+}
+
+.form-label {
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.sex-container {
+    border: none;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.sex-container legend {
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+.sex-container div {
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+.sex-container label {
+    margin-right: 20px;
+}
+
+.sex-container input[type="radio"] {
+    margin: 0;
+    margin-right: 10px;
+}
+
+.form-box input[type="text"],
+.form-box input[type="password"],
+.form-box input[type="email"],
+.form-box input[type="date"] {
+    max-width: 100%;
+    width: 100%;
+    height: 50px;
+    padding: 5px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    border-radius: 8px;
+    border: 1px solid #708090;
+    color: black;
+    font-family: "Montserrat", sans-serif;
+    font-size: large;
+}
+
+.form-box input[type="text"]:hover,
+.form-box input[type="password"]:hover,
+.form-box input[type="email"]:hover,
+.form-box input[type="date"]:hover,
+.sex-container input[type="radio"]:hover {
+    border: 2px solid #FA7947;
+}
+
+.text-wrapper .style-remember {
+    float: left;
+}
+
+.text-wrapper .style-forgot-pass {
+    float: right;
+}
+
+.text-wrapper .context-user {
+    grid-column: 1 / 3;
+}
+
+.form-box button {
+    padding: 15px 20px;
+    background-color: #FA7947;
+    color: #034C58;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 800;
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+
+.form-box button:hover {
+    background-color: #362820;
+    color: #FA7947;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+small {
+    display: block;
+    color: #FA7947;
+}
+
+/* Media Queries for Responsive Design */
+@media only screen and (max-width: 1920px) {
+    main {
+        margin: 0 auto;
+    }
+
+    .registration-wrapper {
+        display: block;
+        margin: 0 auto;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .side-img img {
+        border-radius: 10px;
+        max-width: 100%;
+        max-height: 50%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+        object-fit: cover; /* Ensures the image covers the container without overflowing */
+    }
+
+    .side-form {
+        max-width: 100%;
+        max-height: 100%;
+        min-height: 500px;
+        min-width: auto;
+    }
+
+    .form-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .full-width {
+        grid-column: 1 / 2;
+    }
+
+    .title-wrapper {
+        text-align: center;
+        margin-right: 0;
+    }
+
+    .title-wrapper h2 {
+        font-size: xx-large;
+        padding: 5px;
+    }
+
+    .form-box button {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (max-width: 1500px) {
+    .registration-wrapper {
+        padding: 10px;
+    }
+
+    .form-box input[type="text"],
+    .form-box input[type="password"],
+    .form-box input[type="email"],
+    .form-box input[type="date"] {
+        height: 40px;
+        font-size: medium;
+    }
+
+    .form-box button {
+        padding: 10px;
+        font-size: 18px;
+    }
+
+    .title-wrapper h2 {
+        font-size: 28px;
+    }
+
+    .title-wrapper p {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .registration-wrapper {
+        padding: 5px;
+    }
+
+    .form-box input[type="text"],
+    .form-box input[type="password"],
+    .form-box input[type="email"],
+    .form-box input[type="date"] {
+        height: 35px;
+        font-size: small;
+    }
+
+    .form-box button {
+        padding: 8px;
+        font-size: 16px;
+    }
+
+    .title-wrapper h2 {
+        font-size: 24px;
+    }
+
+    .title-wrapper p {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .form-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .full-width {
+        grid-column: 1 / 2;
+    }
+
+    .title-wrapper {
+        text-align: center;
+    }
+
+    .title-wrapper h2 {
+        font-size: 20px;
+    }
+
+    .title-wrapper p {
+        font-size: 12px;
+    }
+
+    .form-box input[type="text"],
+    .form-box input[type="password"],
+    .form-box input[type="email"],
+    .form-box input[type="date"] {
+        height: 30px;
+        font-size: small;
+    }
+
+    .form-box button {
+        padding: 6px;
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .form-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .full-width {
+        grid-column: 1 / 2;
+    }
+
+    .title-wrapper {
+        text-align: center;
+    }
+
+    .title-wrapper h2 {
+        font-size: 18px;
+    }
+
+    .title-wrapper p {
+        font-size: 12px;
+    }
+
+    .form-box input[type="text"],
+    .form-box input[type="password"],
+    .form-box input[type="email"],
+    .form-box input[type="date"] {
+        height: 25px;
+        font-size: small;
+    }
+
+    .form-box button {
+        padding: 5px;
+        font-size: 12px;
+    }
+}

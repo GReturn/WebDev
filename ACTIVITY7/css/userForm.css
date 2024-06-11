@@ -1,0 +1,126 @@
+#inputForm {
+	/* top and bottom margin are set to 20px, while left and right are set to auto	*/
+	margin: 30px; 
+	max-width: 75%;
+
+	padding: 20px;
+	border-radius: 20px;
+	background-color: rgba(0,0,0,0.25);
+}
+
+/* 
+	The idea is that the CSS will select first the id "inputForm"
+	then its child element "h2" will inherit the styles defined.
+*/
+#inputForm h2 {
+	margin-bottom: 20px;
+	font-size: 1.3em;
+	color: #3C5B6F;
+
+	text-transform: uppercase;
+}
+
+/*
+	CSS grid is applied in our userForm to get our desire layout.
+	We set the number of columns for our grid to 2, and the width x height of our grids are set to auto.
+*/
+#userForm {
+	display: grid;
+	grid-template-columns: auto auto;
+	grid-gap: 10px;
+	justify-content: center;
+
+	color: #3C5B6F;
+	font-weight: bold;
+}
+
+/*
+	The same logic is applied to #inputForm h2. The CSS will select the 
+	id "userForm" then its child element/s "label" will inherit its styles.
+*/
+#userForm label {
+	display: block;
+	margin-bottom: 0px;
+}
+
+
+/*
+	The good thing about using CSS is that you can assign multiple selectors with similar styles.
+	Since we don't want all types of input to inherit the style, we specified only the "text" and
+	"date" can inherit the style.
+*/
+#userForm input[type="text"],
+#userForm input[type="date"] {
+	width: 100%;
+	padding: 5px;
+	box-sizing: border-box;
+	margin-bottom: 12px;
+	color: black;
+
+	border-radius: 8px;
+}
+
+#userForm fieldset {
+	border: none;
+}
+
+#userForm fieldset legend {
+	display: block;
+	margin-bottom: 8px;
+}
+
+#userForm fieldset label {
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+#userForm input[type="radio"] {
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 15px;
+}
+
+
+/*
+	Now that we have finished defining the layout of our form.
+	Let's start styling the buttons.
+*/
+
+#submitButton {
+	margin-top: 20px;
+	padding: 15px 20px;
+	background-color: #7eb77f;
+	color: white;
+	font-weight: bolder;
+	border: 2px solid #7eb77f;
+	border-radius: 15px;
+	cursor: pointer;
+	font-size: 14px;
+	width: 400px;
+}
+
+#submitButton:hover {
+	background-color: white;
+	color: #7eb77f;
+}
+
+#cancelButton {
+	margin-top: 20px;
+	padding: 15px 20px;
+	background-color: white;
+	color: #d13b23;
+	font-weight: bolder;
+	border: 2px solid #d13b23;
+	border-radius: 15px;
+	cursor: pointer;
+	font-size: 14px;
+	width: 400px;
+}
+
+#cancelButton:hover {
+	background-color: #d13b23;
+	color: white;
+}
+

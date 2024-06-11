@@ -1,0 +1,41 @@
+/*
+	This stylesheets just contains the styling of the table.
+*/
+
+#userData {
+	margin: 30px;
+}
+
+#userData h2 {
+	margin-bottom: 20px;
+	color: #3C5B6F;
+	text-align: center;
+
+	text-transform: uppercase;
+}
+
+#userTable {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+#userTable th, #userData td {
+	padding: 10px;
+	border: 1px solid #9d9d9d;
+}
+
+#userTable th {
+	background-color: #f8d9d4;
+	
+	color:#153448
+}
+
+#userTable tbody tr {
+	color:white;
+}
+#userTable tbody tr:nth-child(even) {
+	background-color: #3C5B6F;
+}
+#userTable tbody tr:nth-child(odd) {
+	background-color: #153448;
+}

@@ -1,0 +1,211 @@
+section#products {
+    background-color: #81C3D7;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h2 {
+        padding: 16px;
+    }
+    ul img {
+        cursor: pointer;
+    }
+    ul img:hover {
+        opacity: 0.7;
+    }
+}
+
+/* Image Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 99;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+
+    img {
+        opacity: 1.0;
+    }
+}
+/* Modal Content (image) */
+.img-modal-content {
+    margin: auto;
+    display: block;
+    width: 25%;
+    max-width: 75%;
+}
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(1)}
+    to {-webkit-transform:scale(2)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0.4)}
+    to {transform:scale(1)}
+}
+@-webkit-keyframes zoom-out {
+    from {transform:scale(1)}
+    to {transform:scale(0)}
+}
+@keyframes zoom-out {
+    from {transform:scale(1)}
+    to {transform:scale(0)}
+}
+
+/* Add Animation */
+.img-modal-content, #caption {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+.out {
+    animation-name: zoom-out;
+    animation-duration: 0.6s;
+}
+  /* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+
+
+/* contianer for both the image slider and scrollbar */
+.container {
+    max-width: 1200px;
+    width: 95%;
+}
+
+.slider_wrapper {
+    position: relative;
+}
+
+/* defining the styles on mutiple classes */
+.slider_wrapper .slide_button {
+    position: absolute;
+    top: 50%;
+    outline: none;
+    border: none;
+    height: 50px;
+    width: 50px;
+    z-index: 5;
+    color: #fff;
+    display: flex;
+    cursor: pointer;
+    font-size: 2.2rem;
+    background: #2F6690;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+/* we defined the different button states */
+.slider_wrapper .slide_button:hover {
+    background: #16425B;
+}
+
+.slider_wrapper .slide_button#prev_button {
+    left: -25px;
+    display: none;
+}
+
+.slider_wrapper .slide_button#next_button {
+    right: -25px;
+}
+
+/* layout of the slider */
+.slider_wrapper .image_list {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 18px;
+    font-size: 0;
+    list-style: none;
+    margin-bottom: 30px;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.slider_wrapper .image_list::-webkit-scrollbar {
+    display: none;
+}
+
+.slider_wrapper .image_list .image_item {
+    width: 325px;
+    height: 400px;
+    object-fit: cover;
+}
+
+/* define our scrollbar */
+.container .slider_scrollbar {
+    height: 24px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+/* this is the track */
+.slider_scrollbar .scrollbar_track {
+    background: #ccc;
+    width: 100%;
+    height: 2px;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    position: relative;
+}
+
+.slider_scrollbar:hover .scrollbar_track {
+    height: 4px;
+}
+
+.slider_scrollbar .scrollbar_thumb {
+    position: absolute;
+    background: #2F6690;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    height: 100%;
+    cursor: grab;
+    border-radius: inherit;
+}
+
+.slider_scrollbar .scrollbar_thumb:active {
+    cursor: grabbing;
+    height: 8px;
+    top: -2px;
+}
+
+.slider_scrollbar .scrollbar_thumb:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -10px;
+    bottom: -10px;
+}
+/* ADD RESPONSIVE CSS */
+@media only screen and (max-width: 1023px) {
+    .slider_wrapper .slide_button {
+        display: none !important;
+    }
+
+    .slider_wrapper .image_list {
+        gap: 10px;
+        margin-bottom: 15px;
+        scroll-snap-align: x mandatory;
+    }
+
+    .slider_scrollbar .scrollbar_thumb {
+        width: 20%;
+    }
+}

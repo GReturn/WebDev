@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>MENDOZA - Activity 8</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0">
+	<!-- DOWNLOAD GOOGLE FONTS -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+	<!-- EXTERNAL CSS STYLES -->
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/font.css">
+    
+    <link rel="stylesheet" type="text/css" href="css/countdown.css">
+    <link rel="stylesheet" type="text/css" href="css/carousel.css">
+    <link rel="stylesheet" type="text/css" href="css/forms.css">
+</head>
+<body class="montserratRegular">
+	<header class="montserratBold">
+		<figure>
+            <picture>
+                <img src="media/logo.png">
+            </picture>
+        </figure>
+        <h1>ADALAZ</h1>
+	</header>
+    <nav class="montserratSemibold">
+        <ul>
+            <a href="#countdown"><li>COUNTDOWN SALE</li></a>
+            <a href="#products"><li>PRODUCTS</li></a>
+            <a href="#contact-form"><li>CONTACT FORM</li></a>
+        </ul>
+    </nav>
+	
+	<main>
+        <section id="countdown">
+            <div class="countdown_content">
+                <h2>THE ULTIMATE ADALAZ SALE</h2>
+                <p>IS COMING TO CEBU CITY IN . . .</p>
+                <!-- wrapper for the day -->
+                <div class="countdown_container">
+                    <div class="timer_container_values">
+                        <p id="days">00</p>
+                        <p class="small_text">DAYS</p>
+                    </div>
+                    <!-- wrapper for the hours -->
+                    <div class="timer_container_values">
+                        <p id="hours">00</p>
+                        <p class="small_text">HOURS</p>
+                    </div>
+                    <!-- wrapper for the minutes -->
+                    <div class="timer_container_values">
+                        <p id="minutes">00</p>
+                        <p class="small_text">MINUTES</p>
+                    </div>
+                    <!-- wrapper for the seconds -->
+                    <div class="timer_container_values">
+                        <p id="seconds">00</p>
+                        <p class="small_text">SECONDS</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+		<section id="products">
+			<h2>SOME OF OUR DISCOUNTED ITEMS!</h2>
+            <div class="container">
+                <section class="slider_wrapper">
+                    <!-- PREVIOUS BUTTON -->
+                    <button id="prev_button" class="slide_button material-symbols-rounded">chevron_left</button>
+                    <!-- LIST OF IMAGE FOR OUR GALLERY -->
+                    <ul class="image_list">
+                        <li><img id="i1" src="media/gallery/im1.jpg" class="image_item" alt="a picture of a toy cat"></li>
+                        <li><img id="i2" src="media/gallery/im2.jpg" class="image_item" alt="a picture of a hanger"></li>
+                        <li><img id="i3" src="media/gallery/im3.jpg" class="image_item" alt="a picture of a dog teeth cleaner"></li>
+                        <li><img id="i4" src="media/gallery/im4.jpg" class="image_item" alt="a picture of a gaming chair"></li>
+                        <li><img id="i5" src="media/gallery/im5.jpg" class="image_item" alt="a picture of a round table"></li>
+                    </ul>
+                    <!-- NEXT BUTTON -->
+                    <button id="next_button" class="slide_button material-symbols-rounded">chevron_right</button>
+                </section>
+                <!-- SCROLLBAR CONTAINER -->
+                <section class="slider_scrollbar">
+                    <!-- purely css -->
+                    <div class="scrollbar_track">
+                        <div class="scrollbar_thumb"></div>
+                    </div>
+                </section>
+            </div>
+
+            <div id="imgModal" class="modal">
+                <img class="img-modal-content" id="img1"> 
+		</section>
+
+        <section id="contact-form">
+			<h2>SEND YOUR INQUIRIES</h2>
+            <form id="userForm">
+                <div class="user-info">
+                    <div class="form-field">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="number">Contact Number:</label>
+                        <input type="number" id="phone" required>
+                    </div>
+                </div>
+                <div class="message-content">
+                    <div class="form-field">
+                        <label for="email">Message:</label>
+                        <textarea id="message" rows="9" required></textarea>
+                    </div>
+                </div>
+                <button type="submit" id="submitButton">SUBMIT</button>
+            </form>
+		</section>
+	</main>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Your message has been submitted or emailed. Thank you!</p>
+        </div>
+    </div>
+    
+
+	<footer class="montserratLight">
+        <p>
+            &copy; ADALAZ 2024
+        </p>
+	</footer>
+
+	<!-- JAVASCRIPT PLACE HERE -->
+	<script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/countdown.js"></script>
+    <script type="text/javascript" src="js/carousel.js"></script>
+    <script type="text/javascript" src="js/image_zoom.js"></script>
+    <script type="text/javascript" src="js/forms.js"></script>
+</body>
+</html>

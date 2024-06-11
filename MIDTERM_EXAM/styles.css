@@ -1,0 +1,124 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FCBB6D;
+    color: #fff;
+}
+
+h2 {
+    text-align: center;
+}
+
+header {
+    background-color: #D8737F;
+    padding: 10px;
+    text-align: center;
+}
+
+nav {
+    background-color: #D8737F;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    font-size:large;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #FCBB6D; 
+}
+
+
+section {
+    padding: 10px;
+    
+}
+
+/* bio */
+#biography {
+    background-color: #AB6C82; 
+}
+section#biography figcaption {
+    text-align: center;
+    font-weight: 700;
+    font-size:xx-large;
+}
+#biography p {
+    padding-left: 100px;
+    padding-right: 100px;
+    text-align: justify;
+}
+
+/* Skills */
+#skills {
+    background-color: #685D79;
+    padding: 20px;
+}
+
+#skills h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fff; 
+}
+
+#skills article {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+#skills figure {
+    text-align: center;
+    background-color: #FCBB6D; 
+    padding: 20px;
+    border-radius: 5px;
+}
+
+#skills blockquote {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #475C7A; 
+}
+
+#skills figcaption ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#skills figcaption li {
+    margin-bottom: 5px;
+    color: #475C7A;
+}
+
+
+footer {
+    background-color: #D8737F; 
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+img#me {
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 20px;
+}
